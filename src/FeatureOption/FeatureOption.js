@@ -20,7 +20,7 @@ class FeatureOption extends Component {
           className="feature__option"
           name={feature}
         />
-        <label htmlFor={itemHash} className="feature_label">
+        <label htmlFor={itemHash} className="feature__label">
           {item.name} ({USCurrencyFormat.format(item.cost)})
         </label>
       </div>
