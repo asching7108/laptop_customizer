@@ -12,6 +12,7 @@ class FeatureList extends Component {
           featureName={feature}
           options={this.props.features[feature]}
           selectedOption={this.props.selected[feature]}
+          handleUpdate={this.props.handleUpdate}
         />
       );
     });

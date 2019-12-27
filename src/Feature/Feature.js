@@ -17,8 +17,9 @@ class Feature extends Component {
           key={itemHash}
           item={item}
           itemHash={itemHash}
-          feature={slugify(featureName)}
+          feature={featureName}
           selectedOption={selectedOption}
+          handleUpdate={this.props.handleUpdate}
         />
       );
     });
