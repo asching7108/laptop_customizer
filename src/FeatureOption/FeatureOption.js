@@ -10,7 +10,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
 class FeatureOption extends Component {
   render() {
-    const { item, itemHash, feature } = this.props;
+    const { item, itemHash, feature, selectedOption } = this.props;
     
     return (
       <div className="feature__item">
@@ -19,8 +19,9 @@ class FeatureOption extends Component {
           id={itemHash}
           className="feature__option"
           name={feature}
+          checked={item.name === selectedOption.name}
         />
-        <label htmlFor={itemHash} className="feature_label">
+        <label htmlFor={itemHash} className="feature__label">
           {item.name} ({USCurrencyFormat.format(item.cost)})
         </label>
       </div>

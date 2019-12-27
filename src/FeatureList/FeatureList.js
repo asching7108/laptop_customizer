@@ -10,7 +10,9 @@ class FeatureList extends Component {
         <Feature
           key={featureHash}
           featureName={feature}
-          options={this.props.features[feature]} />
+          options={this.props.features[feature]}
+          selectedOption={this.props.selected[feature]}
+        />
       );
     });
 

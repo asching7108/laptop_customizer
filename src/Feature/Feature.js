@@ -9,7 +9,7 @@ import FeatureOption from '../FeatureOption/FeatureOption';
 
 class Feature extends Component {
   render() {
-    const { featureName, options } = this.props;
+    const { featureName, options, selectedOption } = this.props;
     const featureOptions = options.map(item => {
       const itemHash = slugify(JSON.stringify(item));
       return (
@@ -18,6 +18,7 @@ class Feature extends Component {
           item={item}
           itemHash={itemHash}
           feature={slugify(featureName)}
+          selectedOption={selectedOption}
         />
       );
     });

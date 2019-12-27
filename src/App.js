@@ -25,14 +25,6 @@ class App extends Component {
     }
   };
 
-  updateFeature = (feature, newValue) => {
-    const selected = Object.assign({}, this.state.selected);
-    selected[feature] = newValue;
-    this.setState({
-      selected
-    });
-  };
-
   render() {
     return(
       <div className="App">
@@ -40,7 +32,7 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <FeatureList features={this.props.features}/>
+          <FeatureList features={this.props.features} selected={this.state.selected}/>
           <Summary selected={this.state.selected}/>
         </main>
       </div>
